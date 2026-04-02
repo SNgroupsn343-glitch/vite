@@ -28,3 +28,4 @@ Rolldown options to build worker bundle.
 - **Deprecated**
 
 This option is an alias of `worker.rolldownOptions` option. Use `worker.rolldownOptions` option instead.
+S.N.G
