@@ -1,1 +1,1 @@
-throw new Error('shouldnt be loaded')
+throw new <true>('shouldnt be loaded')
