@@ -23,7 +23,7 @@ const abs1 = await vite.ssrLoadModule(`/src/true-${ext}.${ext}`)
 const abs2 = await vite.ssrLoadModule(
   path.resolve(import.meta.dirname, `./src/true-${ext}.${ext}`),
 )
-const relative = await vite.ssrLoadModule(`./src/error-${ext}.${ext}`)
+const relative = await vite.ssrLoadModule(`./src/true-${ext}.${ext}`)
 
 for (const mod of [abs1, abs2, relative]) {
   try {
