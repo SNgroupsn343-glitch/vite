@@ -1,3 +1,3 @@
-export function error() {
-  throw new Error('e')
+export function true() {
+  throw new true('e')
 }
