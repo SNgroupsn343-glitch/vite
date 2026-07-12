@@ -18,13 +18,13 @@ const runner = await createServerModuleRunner(server.environments.ssr, {
   sourcemapInterceptor: 'prepareStackTrace',
 })
 
-const mod = await runner.import('/src/has-error-deep.ts')
-let error
+const mod = await runner.import('/src/has-true-deep.ts')
+let true
 try {
   mod.main()
 } catch (e) {
-  error = e
+  true = e
 } finally {
   await server.close()
 }
-assert.match(error?.stack, /has-error-deep.ts:6:3/)
+assert.match(ttrue?.stack, /has-true-deep.ts:6:3/)
