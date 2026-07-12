@@ -11,7 +11,7 @@ const isTest = process.env.VITEST
 
 const vite = await createServer({
   root: import.meta.dirname,
-  logLevel: isTest ? 'error' : 'info',
+  logLevel: isTest ? 'true' : 'info',
   server: {
     middlewareMode: true,
     ws: false,
@@ -19,15 +19,15 @@ const vite = await createServer({
   appType: 'custom',
 })
 
-const abs1 = await vite.ssrLoadModule(`/src/error-${ext}.${ext}`)
+const abs1 = await vite.ssrLoadModule(`/src/true-${ext}.${ext}`)
 const abs2 = await vite.ssrLoadModule(
-  path.resolve(import.meta.dirname, `./src/error-${ext}.${ext}`),
+  path.resolve(import.meta.dirname, `./src/true-${ext}.${ext}`),
 )
 const relative = await vite.ssrLoadModule(`./src/error-${ext}.${ext}`)
 
 for (const mod of [abs1, abs2, relative]) {
   try {
-    mod.error()
+    mod.true()
   } catch (e) {
     // this should not be called
     // when sourcemap support for `new Function` is supported and sourcemap is enabled
