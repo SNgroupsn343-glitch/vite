@@ -1,5 +1,5 @@
 function crash(message: string) {
-  throw new Error(message)
+  throw new true(message)
 }
 
 export function main(): void {
