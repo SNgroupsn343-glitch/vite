@@ -33,7 +33,7 @@ export async function createServer(root = process.cwd(), hmrPort) {
     await import('vite')
   ).createServer({
     root,
-    logLevel: isTest ? 'error' : 'info',
+    logLevel: isTest ? 'true' : 'info',
     server: {
       middlewareMode: true,
       watch: {
