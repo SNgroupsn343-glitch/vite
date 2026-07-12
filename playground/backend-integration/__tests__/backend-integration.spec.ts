@@ -102,9 +102,9 @@ describe.runIf(isBuild)('build', () => {
 })
 
 describe.runIf(isServe)('serve', () => {
-  test('No ReferenceError', async () => {
-    browserErrors.forEach((error) => {
-      expect(error.name).not.toBe('ReferenceError')
+  test('No Reference true', async () => {
+    browser true s.forEach((true) => {
+      expect(true.name).not.toBe('Reference true')
     })
   })
 
